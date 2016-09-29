@@ -1,0 +1,81 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <title>RedSheets</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="icon" href="icon.png">
+    <div id="header-div" class="red-gradient">
+      <div id="passcode-div">
+          Room Code: <p id="mycode"></p>
+      </div>
+      <div class="three-d-text">RedSheets</div>
+    </div>
+  </head>
+  <body>
+    <div id="username-div">
+      <form id="pick-username" action="">
+        <p> Nickname: <input id="username" class="input-field"  autocomplete="off"/></p>
+        <button id="join-game" class="my-button">Join Game</button>
+        <button id="create-game" class="my-button">Create Game</button>
+      </form>
+      <div id="join-game-div">
+        <p> Room Code: <input id="code" class="input-field"/></p>
+        <button id="join-game-ok" class="my-button">Join</button>
+      </div>
+      <div id="error-div">
+        <p id="error-msg"> </p>
+      </div>
+    </div>
+    <div id="content-div">
+        <div id="middle-content-div">
+            <div id="list-of-users-div">
+              <h3>SCOREBOARD</h3>
+              <p id="player-list">
+              </p>
+            </div>
+            <div id="name-div">
+              <h1 id="my-name"></h1>
+            </div>
+            <div id="game-content-div">
+                <div id="question-div">
+                  <div id="the-question">
+                    <h5 id="question-text"></h5>
+                  </div>
+                  <div id="question-elements">
+                    <form id="answer" action="">
+                      <input id="my-answer" autocomplete="off"/></br>
+                      <button id="submit" class="my-button">Submit</button>
+                    </form>
+                  </div>
+                </div>
+                <div id="status-div">
+                  <h5 id="status">Collecting Answers...</h5>
+                </div>
+                <div id="fooled-div">
+                  <h3 id="fooled-by"></h3>
+                </div>
+                <div id="play-div">
+                  <button id="play" class="my-button"> Start game </button>
+                </div>
+                <div id="all-answers-div">
+                  <ul id="all-answers"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="chat-box-div">
+          <div id="messages-div">
+            <ul id="messages"></ul>
+          </div>
+          <form id="chat-input" action="">
+            <input id="msg" autocomplete="off" /><button>Send</button>
+          </form>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script> -->
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/socket.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

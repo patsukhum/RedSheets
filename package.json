@@ -1,0 +1,16 @@
+{
+  "name": "myGame",
+  "version": "0.0.1",
+  "description": "my game",
+  "engines": {
+    "node": "6.4.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.10.2",
+    "socket.io": "1.2.0"
+  }
+}

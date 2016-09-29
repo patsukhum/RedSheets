@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:
+  border-box;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Averia Sans Libre';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Averia Sans Libre Regular'), local('AveriaSansLibre-Regular'), url(https://fonts.gstatic.com/s/averiasanslibre/v4/yRJpjT39KxACO9F31mj_LhCOgf-7aQX9fZ-hXCrVrYo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Passero One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Passero One'), local('PasseroOne-Regular'), url(https://fonts.gstatic.com/s/passeroone/v8/5eWwFFxCBNQER-1nDlru9Ygp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(https://fonts.gstatic.com/s/iceland/v5/3MJCdMdmaSZmdrTD7pNyygLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html {
+  width: 100%;
+  height:100%
+}
+
+
+body {
+  font-family: "Averia Sans Libre";
+  text-align: center;
+  background-color: white;
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+}
+
+#chat-box-div {
+  position: relative;
+  clear: both;
+  border: 1px black solid;
+  background: yellow;
+}
+
+#middle-content-div {
+  height: 60%;
+}
+
+#submit {
+  width: 20%;
+  margin: 10px 0 10px 0;
+}
+
+#chat-input { background: #000; padding: 3px; bottom: 0; width: 100%; }
+      #chat-input input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      #chat-input button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li {
+        text-align: left;
+  margin-left: 10px;
+  font-size: 13px;}
+
+#messages-div {
+  height: 120px;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+
+#my-answer {
+  width: 200px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#header-div{
+  position: relative;
+  float: top;
+  width: 100%;
+  height: 60px;
+  padding: 15px 0 15px 0;
+
+
+}  #passcode-div{
+  display: none;
+  position: absolute;
+  right: 10px;
+  color:white;
+  font-size: 15px;
+  font-family: "Averia Sans Libre";
+}
+
+
+#username-div {
+  padding: 40px 0 40px 0;
+}
+  #username-div p,button {
+    padding: 5px 0 5px 0;
+  }
+
+
+#error-div{
+  /*display: none;*/
+  color: red;
+}
+
+#join-game-div {
+  display:none;
+}
+
+#content-div {
+  display: none;
+  height: 100%;
+}
+  #list-of-users-div{
+    position: relative;
+    float: left;
+    /*border: 1px white solid;*/
+    color: rgba(0,0,0,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: -webkit-linear-gradient(45deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%), -webkit-linear-gradient(-45deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%);
+    background: -moz-linear-gradient(45deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%), -moz-linear-gradient(135deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%);
+    background: linear-gradient(45deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%), linear-gradient(135deg, rgba(255,0,0,0) 0, rgba(255,0,0,0) 49%, rgba(255,0,0,1) 49%, rgba(255,0,0,1) 51%, rgba(255,0,0,1) 51%, rgba(255,0,0,0) 51%, rgba(255,0,0,0) 100%);
+    background-position: -5px 0, 5px 0;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: 20px 10px;
+    background-size: 20px 10px;
+    border: 1px black solid;
+    width: 30%;
+    height: 100%;
+  } #list-of-users-div h3 {
+    text-decoration: underline;
+    font-size: 4vw;
+  } #player-list {
+    margin-top: 10px;
+  }
+
+
+#game-content-div {
+  padding-top: 13%;
+  height: 100%;
+  position: relative;
+  margin-left: 30%;  /* Equal to listOfUsersDiv's width */
+}
+
+#all-answers-div {
+  display: none;
+}
+#status-div {
+  display: none;
+}
+
+#name-div {
+  position: relative;
+  float: right;
+  background-color: yellow;
+  height: 15%;
+}
+
+#fooled-div {
+  display: none;
+}
+
+#all-answers {
+  list-style: none;
+} #all-answers li {
+  margin: 15px 0 0 0;
+  width: 50%;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font: 13px "Averia Sans Libre";
+} #all-answers li:hover {
+  background-color: lightblue;
+  border: 2px black solid;
+}
+
+
+.my-button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /*width: 20%;
+  height: 20px;*/
+  padding: 2px;
+  cursor: pointer;
+  margin: 20px 0;
+  border: 2px solid rgb(255, 51, 51);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  font: normal 30px/40px "Averia Sans Libre", Helvetica, sans-serif;
+  color: rgb(255, 51, 51);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  font-size: 4vw;
+}
+
+.my-button:hover {
+  color: rgba(255,255,255,1);
+  background: rgb(255, 51, 51);
+}
+
+.my-button:active {
+  border: 2px solid rgba(33,224,163,1);
+  background: rgba(33,224,163,1);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.my-button-answers {
+  padding: 2px;
+  letter-spacing: 0px;
+  font-size: 3vw;
+}
+
+.three-d-text {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  border: none;
+  padding-left: 10%;
+  text-align: left;
+  font: normal 36px/normal "Passero One", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.three-d-text:hover {
+  color: rgb(206, 62, 57);
+  text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+
+.red-gradient {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 320px;
+  height: 320px;
+  border: none;
+  font: normal 1px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), -webkit-linear-gradient(-225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), -moz-linear-gradient(315deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
+  background: linear-gradient(-45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), linear-gradient(315deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
+  background-position: auto auto, auto auto, -50px 0, -50px 0, auto auto, auto auto;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 50em 50em, 50em 50em, 100em 100em, 100em 100em, 100em 100em, 100em 100em;
+  background-size: 50em 50em, 50em 50em, 100em 100em, 100em 100em, 100em 100em, 100em 100em;
+}
+
+
+.input-field {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 120px;
+  height: 32px;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 21px;
+  border-radius: 21px;
+  font: normal 15px/normal "Antic", Helvetica, sans-serif;
+  color: rgba(140,140,140,1);
+  text-decoration: normal;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(40,40,40,0.4);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+  box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5) inset;
+  -webkit-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  background-color: rgb(234, 232, 206);
+  text-align: center;
+}
+
+.input-field:hover {
+  color: rgba(181,181,181,1);
+  background-color: rgb(242, 193, 19);
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+.input-field:focus {
+  width: 153px;
+  cursor: default;
+  padding: -13px 20px 0;
+  color: rgba(255,255,255,1);
+  -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+  transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
