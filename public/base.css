@@ -155,6 +155,10 @@ body {
   display: none;
 }
 
+#instructions {
+  margin: 0 250px 0 250px;
+}
+
 #name-div {
   position: relative;
   float: right;
