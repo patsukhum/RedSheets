@@ -47,6 +47,7 @@ io.on('connection', function(socket){
     if (scoresInRooms[roomcode] !== undefined){
       // to-do
     }
+
     socket.join(roomcode);
     socket.roomcode = roomcode;
     socket.nickname = nickname;
@@ -76,6 +77,14 @@ io.on('connection', function(socket){
     socket.emit('isValid', true, 'name');
     io.to(roomcode).emit('update users', scoresInRooms[roomcode]);
 
+  });
+
+  socket.on('leave game', function(nickname, roomcode){
+    delete scoresInRooms[roomcode][nickname];
+    delete arrOfAnswers[roomcode][nickname];
+    socket.leave(roomcode);
+    io.to(socket.roomcode).emit('update users', scoresInRooms[socket.roomcode]);
+    //
   });
 
   socket.on('chat message', function(msg){
