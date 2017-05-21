@@ -252,9 +252,7 @@ body {
   color: rgba(255,255,255,1);
   -o-text-overflow: clip;
   text-overflow: clip;
-  background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), -webkit-linear-gradient(-225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(-45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -webkit-linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
-  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), -moz-linear-gradient(315deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), -moz-linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
-  background: linear-gradient(-45deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.0470588) 50%), linear-gradient(45deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%), linear-gradient(315deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(225deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(135deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), linear-gradient(45deg, #FF0000 0, #FF0000 25%, rgba(0,0,0,0) 25%), #ff0000;
+  background: red;
   background-position: auto auto, auto auto, -50px 0, -50px 0, auto auto, auto auto;
   -webkit-background-origin: padding-box;
   background-origin: padding-box;
